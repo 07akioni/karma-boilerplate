@@ -61,10 +61,10 @@ const webpackConfig = {
   ]
 };
 
-if (!process.env.CI_ENV) {
-  webpackConfig.plugins.push(
-    new ProgressBarPlugin()
-  );
-}
+// if (!process.env.CI_ENV) {
+//   webpackConfig.plugins.push(
+//     new ProgressBarPlugin()
+//   );
+// }
 
 module.exports = webpackConfig;
