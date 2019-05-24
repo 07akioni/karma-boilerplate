@@ -5,7 +5,12 @@
 <script>
 export default {
     name: 'amazing',
-    props: ['title']
+    props: ['title'],
+    methods: {
+        hello () {
+            console.log('amazing')
+        }
+    }
 }
 </script>
 

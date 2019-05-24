@@ -1,15 +1,12 @@
-import Amazing from 'main/amazing'
-import { createTest, createVue, destroyVM } from '../util'
+import Amazing from 'main/Amazing.js'
+import { mount } from '@vue/test-utils'
 
 describe('amazing', function () {
-  let vm
-  afterEach(() => {
-    destroyVM(vm)
-  })
   it('should amazing', function () {
-    vm = createTest(Amazing, {
-      title: 'amazing1'
-    }, true)
-    expect(vm.$el.textContent).to.equal('amazing1')
+    const wrapper = mount(Amazing)
+    wrapper.setProps({
+      title: 'not amazing'
+    })
+    expect(wrapper.element.textContent).to.equal('not amazing')
   })
 })
